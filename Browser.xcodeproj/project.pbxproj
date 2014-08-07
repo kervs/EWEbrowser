@@ -19,6 +19,7 @@
 		3B3DB96719931C690054E31F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3DB94F19931C680054E31F /* UIKit.framework */; };
 		3B3DB96F19931C690054E31F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B3DB96D19931C690054E31F /* InfoPlist.strings */; };
 		3B3DB97119931C690054E31F /* BrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DB97019931C690054E31F /* BrowserTests.m */; };
+		3B3DB97C19931D270054E31F /* EWEWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DB97B19931D270054E31F /* EWEWebBrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		3B3DB96C19931C690054E31F /* BrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrowserTests-Info.plist"; sourceTree = "<group>"; };
 		3B3DB96E19931C690054E31F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B3DB97019931C690054E31F /* BrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserTests.m; sourceTree = "<group>"; };
+		3B3DB97A19931D270054E31F /* EWEWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWEWebBrowserViewController.h; path = ../EWEWebBrowserViewController.h; sourceTree = "<group>"; };
+		3B3DB97B19931D270054E31F /* EWEWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EWEWebBrowserViewController.m; path = ../EWEWebBrowserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		3B3DB95119931C680054E31F /* Browser */ = {
 			isa = PBXGroup;
 			children = (
+				3B3DB97A19931D270054E31F /* EWEWebBrowserViewController.h */,
+				3B3DB97B19931D270054E31F /* EWEWebBrowserViewController.m */,
 				3B3DB95A19931C680054E31F /* EWEAppDelegate.h */,
 				3B3DB95B19931C680054E31F /* EWEAppDelegate.m */,
 				3B3DB95D19931C680054E31F /* Images.xcassets */,
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3DB97C19931D270054E31F /* EWEWebBrowserViewController.m in Sources */,
 				3B3DB95C19931C680054E31F /* EWEAppDelegate.m in Sources */,
 				3B3DB95819931C680054E31F /* main.m in Sources */,
 			);
