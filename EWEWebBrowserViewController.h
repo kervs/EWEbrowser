@@ -10,4 +10,6 @@
 
 @interface EWEWebBrowserViewController : UIViewController
 
+-(void) resetWebView;
+
 @end
