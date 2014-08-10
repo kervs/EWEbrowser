@@ -20,6 +20,7 @@
 		3B3DB96F19931C690054E31F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B3DB96D19931C690054E31F /* InfoPlist.strings */; };
 		3B3DB97119931C690054E31F /* BrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DB97019931C690054E31F /* BrowserTests.m */; };
 		3B3DB97C19931D270054E31F /* EWEWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DB97B19931D270054E31F /* EWEWebBrowserViewController.m */; };
+		3BCE60011995BC8E009B762D /* AwesomeFloatingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE60001995BC8E009B762D /* AwesomeFloatingToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		3B3DB97019931C690054E31F /* BrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserTests.m; sourceTree = "<group>"; };
 		3B3DB97A19931D270054E31F /* EWEWebBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWEWebBrowserViewController.h; path = ../EWEWebBrowserViewController.h; sourceTree = "<group>"; };
 		3B3DB97B19931D270054E31F /* EWEWebBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EWEWebBrowserViewController.m; path = ../EWEWebBrowserViewController.m; sourceTree = "<group>"; };
+		3BCE5FFF1995BC8E009B762D /* AwesomeFloatingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeFloatingToolbar.h; sourceTree = "<group>"; };
+		3BCE60001995BC8E009B762D /* AwesomeFloatingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeFloatingToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				3B3DB97B19931D270054E31F /* EWEWebBrowserViewController.m */,
 				3B3DB95A19931C680054E31F /* EWEAppDelegate.h */,
 				3B3DB95B19931C680054E31F /* EWEAppDelegate.m */,
+				3BCE5FFF1995BC8E009B762D /* AwesomeFloatingToolbar.h */,
+				3BCE60001995BC8E009B762D /* AwesomeFloatingToolbar.m */,
 				3B3DB95D19931C680054E31F /* Images.xcassets */,
 				3B3DB95219931C680054E31F /* Supporting Files */,
 			);
@@ -248,6 +253,7 @@
 				3B3DB97C19931D270054E31F /* EWEWebBrowserViewController.m in Sources */,
 				3B3DB95C19931C680054E31F /* EWEAppDelegate.m in Sources */,
 				3B3DB95819931C680054E31F /* main.m in Sources */,
+				3BCE60011995BC8E009B762D /* AwesomeFloatingToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +452,7 @@
 				3B3DB97619931C690054E31F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B3DB97719931C690054E31F /* Build configuration list for PBXNativeTarget "BrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +461,7 @@
 				3B3DB97919931C690054E31F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
