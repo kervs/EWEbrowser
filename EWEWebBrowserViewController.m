@@ -71,11 +71,11 @@
             
         }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Welcome!", @"Welcome title")
+   /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Welcome!", @"Welcome title")
                                                     message:NSLocalizedString(@"Get excited to use the best web browser ever!", @"Welcome comment")
                                                    delegate:nil
                                           cancelButtonTitle:NSLocalizedString(@"OK, I'm excited!", @"Welcome button title") otherButtonTitles:nil];
-    [alert show];
+    [alert show];*/
 }
 - (void)viewDidLoad
 {
@@ -174,6 +174,25 @@
     }
 }
 
+- (void) floatingToolbar:(AwesomeFloatingToolbar *)toolbar didTryToPanWithOffset:(CGPoint)offset {
+    CGPoint startingPoint = toolbar.frame.origin;
+    CGPoint newPoint = CGPointMake(startingPoint.x + offset.x, startingPoint.y + offset.y);
+    
+    CGRect potentialNewFrame = CGRectMake(newPoint.x, newPoint.y, CGRectGetWidth(toolbar.frame), CGRectGetHeight(toolbar.frame));
+    
+    if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+        toolbar.frame = potentialNewFrame;
+    }
+}
+
+
+- (void) floatingToolbar:(AwesomeFloatingToolbar *)toolbar TryToPinchWithScale:(UIPinchGestureRecognizer *)recognizer{
+    
+    toolbar.transform = CGAffineTransformScale(toolbar.transform, recognizer.scale, recognizer.scale);
+    recognizer.scale = 1;
+
+}
+
 #pragma mark - Miscellaneous
 
 - (void) updateButtonsAndTitle {
@@ -191,6 +210,12 @@
     } else {
         [self.activityIndicator stopAnimating];
     }
+    
+    [self.awesomeToolbar addTarget:self.webview forButtonWithTitle:kWebBrowserBackString andAction:@selector(goBack)];
+    [self.awesomeToolbar addTarget:self.webview forButtonWithTitle:kWebBrowserForwardString andAction:@selector(goForward)];
+    [self.awesomeToolbar addTarget:self.webview forButtonWithTitle:kWebBrowserStopString andAction:@selector(stopLoading)];
+    [self.awesomeToolbar addTarget:self.webview forButtonWithTitle:kWebBrowserRefreshString andAction:@selector(reload)];
+    
     [self.awesomeToolbar setEnabled:[self.webview canGoBack] forButtonWithTitle:kWebBrowserBackString];
     [self.awesomeToolbar setEnabled:[self.webview canGoForward] forButtonWithTitle:kWebBrowserForwardString];
     [self.awesomeToolbar setEnabled:self.frameCount > 0 forButtonWithTitle:kWebBrowserStopString];
